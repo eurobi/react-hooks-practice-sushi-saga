@@ -9,7 +9,7 @@ function Table({ plates = [] }) {
   return (
     <>
       <h1 className="remaining">
-        You have: ${/* Give me how much money I have left */} remaining!
+        You have: ${100 - plates.reduce((plate1, plate2) => plate1 + plate2, 0)} remaining!
       </h1>
       <div className="table">
         <div className="stack">{emptyPlates}</div>
